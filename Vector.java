@@ -2,13 +2,23 @@ public class Vector extends GeometricField {
 
 // protected members
 
-   protected double[] vectorValuesPrevious;
 
 // constructors
 
    public Vector(String name, int size) {
-      super(name,"vector",1,size);
-      vectorValuesPrevious = field[0];
+    // Construct an empty geometric field
+      super(name,"Vector",1,size);
+   }
+
+   public Vector(String name, double[] field) {
+    // Construct a geometric field from an array
+      super(name,"Vector",new double [1][field.length]);
+      this.update(field);
+   }
+
+   public Vector(Vector vector) {
+    // construct as a copy
+      super(vector);
    }
 
 // Public operators
