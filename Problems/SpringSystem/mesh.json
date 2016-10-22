@@ -13,6 +13,6 @@
 		{"point":2}
 	],
 	"forces": [
-		{"point":1, "force":["fx":500,"fy":0,"fz":0]}
+		{"point":1, "force":[{"fx":500,"fy":0,"fz":0}]}
 	]
 }
