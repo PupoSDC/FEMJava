@@ -1,7 +1,8 @@
+package GeometricField;
+
 public class Matrix extends GeometricField {
 
 // protected members
-
 
 // constructors
 

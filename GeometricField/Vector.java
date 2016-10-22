@@ -1,3 +1,5 @@
+package GeometricField;
+
 public class Vector extends GeometricField {
 
 // protected members

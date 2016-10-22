@@ -1,3 +1,5 @@
+package GeometricField;
+
 public class GeometricField {
 // Generic class for a geometric field
 
@@ -43,6 +45,7 @@ public class GeometricField {
 // Public Operators
 
 	public String name() {
+	// Returns  type name dimX x dimY.
 	  return this.type + " " + this.name + ": " + this.sizeX + "x" + this.sizeY + "." ;
 	}
 
@@ -85,13 +88,30 @@ public class GeometricField {
 	  this.field[indexX][indexY] = value;
 	}
 
-	/*public GeometricField add(GeometricField f2) {
-		
-		GeometricField result(f1);
+	public void update(GeometricField field) {
+	// Updates a specific value of the array using an index
+	   
+	  if( field.sizeX != this.sizeX && field.sizeY != this.sizeY && field.name  != this.name)
+	  {
+	  	throw new IllegalArgumentException("Attempeted to replace blablabla");
+	  }
+
+	  this.field = field.field;
+	}
+
+	public GeometricField add(GeometricField f2) {
+	// returns a copy of this field + a field f2	
+		GeometricField result = new GeometricField(this);
 
 		if( this.sizeX == f2.sizeX && this.sizeY == f2.sizeY )
 		{
-			GeometricField result;
+			for(int i=0; i<sizeX; i++)
+			{
+				for(int j=0; j<sizeY; j++)
+				{
+					result.field[i][j] = this.field[i][j] + f2.field[i][j];
+				}
+			}
 		}
 		else
 		{
@@ -99,7 +119,7 @@ public class GeometricField {
 		}
 
 		return result;
-	}*/
+	}
 
 	public void storePrevious() {
 		previousfield = field;
