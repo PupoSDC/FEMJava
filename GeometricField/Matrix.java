@@ -13,7 +13,7 @@ public class Matrix extends GeometricField {
       super(name,"Matrix",field);
    }
 
-    public Matrix(Matrix matrix)) {
+    public Matrix(Matrix matrix) {
       super(matrix);
    }
    
