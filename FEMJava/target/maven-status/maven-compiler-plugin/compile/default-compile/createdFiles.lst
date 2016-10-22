@@ -2,3 +2,5 @@ GeometricField\GeometricField.class
 GeometricField\Matrix.class
 GeometricField\Vector.class
 Mesh\Point.class
+FEMJava\FEMJava.class
+Mesh\Mesh.class

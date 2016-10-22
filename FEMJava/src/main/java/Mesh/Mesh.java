@@ -1,40 +1,52 @@
 package Mesh;
 
-import java.io.BufferedReader;  
-import java.io.FileReader;  
+import java.io.FileWriter;
 import java.io.IOException;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Mesh {
 
 // protected members
-   protected final int size;
-   protected final Point[] points;
-   //protected final element[];
+
+   protected Point[] points;
+  //protected final element[];
 
 // constructors
-   public Mesh(String path) throws IOException {
-      try 
-      {  
-         BufferedReader br = new BufferedReader( new FileReader(path) ); 
-         Point[] points = gson.fromJson(br, points);
+   public Mesh(String path) {
+      try {
+         String text = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
+         
+         JSONObject jsonObject = new JSONObject(text);
+         JSONArray        list = (JSONArray) jsonObject.get("points");        
+         points = new Point[list.length()];
+
+         for(int i =0; i < list.length();i++)
+         {
+            JSONObject p = list.getJSONObject(i);
+            points[i] = new Point(p.getInt("id"),p.getInt("x"),p.getInt("y"),p.getInt("z"));
+         }
+                  
       } 
-      catch (IOException e) { e.printStackTrace(); } 
-
-      this.size = 1;
-      this.points = new Point[];
+      catch(Exception e){e.printStackTrace();}      
    }
 
-   public Mesh(Mesh mesh) {
+   //public Mesh(Mesh mesh) {
       // construct as a copy
-      this.size     = mesh.size;
-      this.points   = mesh.points;
-   }
+      //this.size     = mesh.size;
+      //this.points   = mesh.points;
+   //}
 
 
 // Public operators
 
+   public int size(){
+      return points.length*3;
+   }
 
 // Private Operators
 
