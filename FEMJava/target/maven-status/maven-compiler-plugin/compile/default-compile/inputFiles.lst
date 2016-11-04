@@ -1,7 +1,8 @@
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\Mesh\Mesh.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\GeometricField\Matrix.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\GeometricField\Vector.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\GeometricField\GeometricField.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\Mesh\Point.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\FEMJava.java
-C:\Users\Pedro\Desktop\FEMjava\FEMJava\src\main\java\Elements\Elements.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/Mesh/Point.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/FEMJava.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/GeometricField/GeometricField.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/Element/String1D.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/GeometricField/Matrix.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/GeometricField/Vector.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/Element/Element.java
+/home/pupo/Documents/FEMJava/FEMJava/src/main/java/Mesh/Mesh.java

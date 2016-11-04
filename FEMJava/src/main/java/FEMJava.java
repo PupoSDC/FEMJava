@@ -1,19 +1,20 @@
 package FEMJava;
 
 import GeometricField.*;
-import Mesh.*;
+//import Mesh.*;
+import Element.*;
 
 class FEMJava {
   public static void main(String[] args){
     System.out.println("FEMJava");
 
-    Mesh mesh = new Mesh("mesh.json");
+  //  Mesh mesh = new Mesh("mesh.json");
 
-  	Vector displacements = new Vector("Displacements",mesh.size());
-  	Vector forces        = new Vector("forces",2);
-  	Matrix stiffness     = new Matrix("Stiffness",mesh.size());
+  	//Vector displacements = new Vector("Displacements",mesh.size());
+  	//Vector forces        = new Vector("forces",2);
+  	//Matrix stiffness     = new Matrix("Stiffness",mesh.size());
 
-  	System.out.println(displacements.name());
-  	System.out.println(stiffness.name());
+  	//System.out.println(displacements.name());
+  	//System.out.println(stiffness.name());
   }
 }

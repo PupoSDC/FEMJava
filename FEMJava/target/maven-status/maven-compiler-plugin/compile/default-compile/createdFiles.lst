@@ -1,6 +1,8 @@
-GeometricField\GeometricField.class
-GeometricField\Matrix.class
-GeometricField\Vector.class
-Mesh\Point.class
-FEMJava\FEMJava.class
-Mesh\Mesh.class
+GeometricField/GeometricField.class
+GeometricField/Matrix.class
+Element/Element.class
+Mesh/Mesh.class
+GeometricField/Point.class
+Element/Spring1D.class
+GeometricField/Vector.class
+FEMJava/FEMJava.class
